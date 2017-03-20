@@ -8,8 +8,8 @@
 ## Structure
 
 ```
-	front/			example how use in front
-	app/			app
+front/			example how use in front
+app/			app
 ```
 
 ### events client -> server
