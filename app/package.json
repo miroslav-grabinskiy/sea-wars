@@ -1,0 +1,16 @@
+{
+  "name": "battleship",
+  "version": "0.0.1",
+  "description": "",
+  "main": "battleship.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "miroslav.grabinskiy",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "randomstring": "^1.1.5",
+    "socket.io": "^1.7.3"
+  }
+}
