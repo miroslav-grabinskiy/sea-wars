@@ -1,17 +1,19 @@
-#how start
+# how start
 
 1. install npm (current 3.10.9), node.js (current 6.9.2)
 2. run "npm install" in app directory
 3. run "node app.js" in app directory
 
 
-##Structure
+## Structure
+
 ```
 	front/			example how use in front
 	app/			app
 ```
 
-###events client -> server
+### events client -> server
+
 `authorize` 
 data: 
 ```
@@ -44,7 +46,8 @@ rowName must be [a-j], colName [0-9]
 create or connect to exist game
 
 
-###events server -> client
+### events server -> client
+
 "authorized", data: {"login": String, "userId": String}
 
 `"start game"`
@@ -60,27 +63,27 @@ create or connect to exist game
 
 example Battlefield
 ```
-	{
-		"a": [
-			0: {
-				emptyForShip: Boolean, (only for self battlefield)
-				placing: Boolean, (only for self battlefield)
-				shoted: Boolean, 
-				killed: Boolean or null,
-				ship: Boolean or null, (only for self battlefield) //sorry, now this field is null always
-				wounded: Boolean or null
-			},
-			1,
-			
-			...
-			
-			9
-		],
-			
+{
+	"a": [
+		0: {
+			emptyForShip: Boolean, (only for self battlefield)
+			placing: Boolean, (only for self battlefield)
+			shoted: Boolean, 
+			killed: Boolean or null,
+			ship: Boolean or null, (only for self battlefield) //sorry, now this field is null always
+			wounded: Boolean or null
+		},
+		1,
+		
 		...
 		
-		"j"
-	}
+		9
+	],
+		
+	...
+	
+	"j"
+}
 ```
 
 `"shot"`
@@ -108,7 +111,8 @@ data:
 custom error events
 
 
-##logic
+## logic
+
 1. socket connect
 2. emit client -> server event "authorize";
 3. wait server -> client event "authorized"
